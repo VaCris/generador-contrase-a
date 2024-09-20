@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <title>Generador de contraseñas</title>
+    <title>Generador de Contraseñas</title>
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-     
     <main class="container">
         <div class="container__contenido">
             <div class="container__informacion">
@@ -19,14 +18,30 @@
                     <h1>Generador<span class="container__texto-azul"> de Contraseñas</span></h1>
                     <div class="container__campo"> 
                         <label class="texto__parrafo">Cantidad
-                            <input class="container__input" type="number" id="cantidad" aria-label="Cantidad de contraseñas">
+                            <input class="container__input" type="number" id="cantidad" aria-label="Cantidad de contraseñas" min="1" value="1">
                         </label>
                         <button class="boton" id="generar" aria-label="Generar contraseña">Generar</button>
                         <button class="boton" id="limpiar" aria-label="Limpiar campos">Limpiar</button>
                     </div> 
                     <div class="container__campo">
-                        <input class="container__contrasena" type="text" id="contrasena" placeholder="contraseña" aria-label="Contraseña generada">
+                        <label>
+                            <input type="checkbox" id="mayusculas" checked> Contener mayúsculas
+                        </label>
+                        <label>
+                            <input type="checkbox" id="minusculas" checked> Contener minúsculas
+                        </label>
+                        <label>
+                            <input type="checkbox" id="numeros" checked> Contener números
+                        </label>
+                        <label>
+                            <input type="checkbox" id="caracteres" checked> Contener caracteres especiales
+                        </label>
                     </div>
+                    <div class="container__campo">
+                        <input class="container__contrasena" type="text" id="contrasena" placeholder="contraseña" aria-label="Contraseña generada" readonly>
+                    </div>
+                    
+                    <div class="fortaleza" id="fortaleza"></div>
                 </div> 
             </div>
         </div>
